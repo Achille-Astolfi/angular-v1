@@ -1,0 +1,7 @@
+<ng-container *ngIf="!closeIsVisible; else elseTemplate">
+    <p>Qui sotto c'è un bottone invisibile; clicca su "Apri" per vederlo.</p>
+</ng-container>
+<ng-template #elseTemplate>
+    <p>Qui sotto c'è un bottone; clicca su "Chiudi" per nasconderlo.</p>
+</ng-template>
+<button *ngIf="closeIsVisible" (click)="hideMeAgain($event)">Chiudi</button>
